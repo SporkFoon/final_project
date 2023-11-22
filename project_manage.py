@@ -1,9 +1,9 @@
 # import database module
+from database import Database, Table, LoginTable
 
 # define a funcion called initializing
 
 def initializing():
-    pass
 
 # here are things to do in this function:
 
@@ -18,17 +18,29 @@ def initializing():
 
 # define a funcion called login
 
+    db = Database()
+
+    db.load_table('persons', 'persons.csv')
+    db.load_login_table('login', 'login.csv')
+
+    db.save_table('persons')
+    db.save_table('login')
+
 def login():
-    pass
 
 # here are things to do in this function:
    # add code that performs a login task
         # ask a user for a username and password
         # returns [ID, role] if valid, otherwise returning None
 
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+
+    user_info = db.tables['login'].authenticate(username, password)
+    return user_info
+
 # define a function called exit
 def exit():
-    pass
 
 # here are things to do in this function:
    # write out all the tables that have been modified to the corresponding csv files
@@ -38,7 +50,10 @@ def exit():
 
 
 # make calls to the initializing and login functions defined above
+    db.save_table('persons')
+    db.save_table('login')
 
+db = Database()
 initializing()
 val = login()
 
@@ -58,4 +73,16 @@ val = login()
     # see and do advisor related activities
 
 # once everyhthing is done, make a call to the exit function
+if val and val[1] == 'admin':
+    pass
+elif val and val[1] == 'student':
+    pass
+elif val and val[1] == 'member':
+    pass
+elif val and val[1] == 'lead':
+    pass
+elif val and val[1] == 'faculty':
+    pass
+elif val and val[1] == 'advisor':
+    pass
 exit()
