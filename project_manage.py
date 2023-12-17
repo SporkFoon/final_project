@@ -7,13 +7,11 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 db = Database()
 
 # Define function to initialize
-# Define function to initialize
 def initializing():
     global db
 
-    # Specify the correct paths to your CSV files
-    persons_csv_path = os.path.join(__location__, 'persons.csv')  # Replace with the correct filename
-    login_csv_path = os.path.join(__location__, 'login.csv')      # Replace with the correct filename
+    persons_csv_path = os.path.join(__location__, 'persons.csv')
+    login_csv_path = os.path.join(__location__, 'login.csv')
 
     # Create tables and add them to the database
     persons_table = Table(persons_csv_path)

@@ -1,6 +1,11 @@
 import csv
 import os
 
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+persons = []
+
 class Database:
     def __init__(self):
         self.tables = {}
