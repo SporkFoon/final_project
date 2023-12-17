@@ -1,4 +1,4 @@
-# Evaluation Process
+# Final Project Evaluation Process
 
 ### Admin Role
 Admins play a crucial role in the evaluation process. In addition to managing advisee projects and reviewing proposal approval requests, admins will now evaluate project reports submitted by lead students. The `Admin.evaluate_project_reports` method facilitates this process. Admins can provide feedback and make decisions on approving the project reports.

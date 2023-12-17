@@ -1,4 +1,4 @@
-# Senior Project Management System
+# Final Project
 
 ## Files and Classes
 
@@ -16,7 +16,7 @@
 3. **persons.csv**
    - CSV file with sample person data.
 
-4. **ogin.csv**
+4. **login.csv**
    - CSV file with sample login data.
 
 ## Compilation and Execution

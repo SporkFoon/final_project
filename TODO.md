@@ -1,4 +1,4 @@
-# Project Completion Checklist
+# Final Project Completion Checklist
 
 ## Project Milestones
   - Assemble the project team and advisors
